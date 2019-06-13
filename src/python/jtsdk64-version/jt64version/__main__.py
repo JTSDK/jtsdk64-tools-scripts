@@ -1,26 +1,10 @@
-# Name ..............: jtsdk-version-check.py
-# Description .......: Print JTSDK64 Tool Chain Versions
-# Author ............: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
-# Copyright .........: Copyright (C) 2013-2019 Greg Beam, KI7MT
-# License ...........: GPL-3
-#
-# jtsdk-version-check is free software: you can redistribute it and/or modify it
-# under the terms of the GNU General Public License as published by the Free
-# Software Foundation either version 3 of the License, or (at your option) any
-# later version. 
-#
-# jtsdk-version-check is distributed in the hope that it will be useful, but WITHOUT
-# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-# FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
-# details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-import os, sys
+import os
+import sys
 
 from colorconsole import terminal
-from subprocess import PIPE, Popen, run
+
+from subprocess import PIPE
+from subprocess import run
 
 
 def clear():
@@ -98,11 +82,11 @@ def get_pkgconfig_version():
 def get_psql_version():
     """Return PostgreSQL Version"""
     if os.environ['POSTGRES'] == "Not Installed":
-        ver = "Not Installed"    
+        ver = "Not Installed"   
     else:
         output = cmd("psql --version")
         ver = " ".join(output.split()[2:3])
-    
+
     return ver.strip()
 
 
@@ -146,6 +130,7 @@ def get_mingw32_make_version():
     ver = " ".join(output.split()[2:3])
     return ver.strip()
 
+
 def main():
     clear()
     """JTSDK Main Menu Headder Message"""
@@ -154,7 +139,7 @@ def main():
     clear()
     screen = terminal.get_terminal(conEmu=False)
     print("--------------------------------------------------")
-    screen.set_color(3,0)
+    screen.set_color(3, 0)
     print(f"JTSDK64 Tools {os.environ['VERSION']} Version Check")
     screen.reset_colors()
     print("--------------------------------------------------\n")
@@ -182,6 +167,7 @@ def main():
  This is free software; There is NO warranty; not even
  for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
     ''')
+
 
 if __name__ == '__main__':
     main()

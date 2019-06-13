@@ -1,4 +1,6 @@
-import os, sys, glob
+import os
+import sys
+import glob
 from colorconsole import terminal
 
 
@@ -33,7 +35,7 @@ def main():
     screen = terminal.get_terminal(conEmu=False)
     clear()
     print("--------------------------------------------------")
-    screen.set_color(3,0)
+    screen.set_color(3, 0)
     print(f"JTSDK64 Tools {os.environ['VERSION']} Help Menu")
     screen.reset_colors()
     print("--------------------------------------------------")
