@@ -1,26 +1,19 @@
 import os
 import setuptools
 
-here = os.path.dirname(os.path.abspath(__file__))
+import jt64env
 
-# Package meta-data
-version_info = (0, 0, 1)
-__title__ = "jt64env"
-__version__ = '.'.join(str(c) for c in version_info)
-__name__ = "jt64env"
-__author__ = "Greg Beam, KI7MT"
-__license__ = "GPLv3"
-__email__ = "ki7mt@yahoo.com"
+here = os.path.dirname(os.path.abspath(__file__))
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name=__title__,
-    version=__version__,
-    author=__author__,
-    license=__license__,
-    author_email=__email__,
+    name=jt64env.__title__,
+    version=jt64env.__version__,
+    author=jt64env.__author__,
+    license=jt64env.__license__,
+    author_email=jt64env.__author__,
     long_description=long_description,
     long_description_content_type="text/markdown",
 
