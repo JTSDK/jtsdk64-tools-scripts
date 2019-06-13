@@ -1,7 +1,7 @@
 import os, sys, datetime
 import contextlib
 
-# QT version List
+# Supported QT version List
 version_list = ['5.12.2', '5.12.3']
 
 # process variables
@@ -19,16 +19,21 @@ adoc_path = os.environ["ruby_dir_f"]
 svn_path = os.environ["svn_dir_f"]
 
 
+# TODO: Move this to jt64common package
 def clear():
+    """Clear screen Windows or *Nix"""
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
+# TODO: Move this to jt64common package
 def make_dir():
+    """Makes a directory if not exist"""
     if not os.path.exists(tc_dir):
         os.makedirs(tc_dir)
 
 
 def gentc():
+    """Generates Tool Chain files for each QT version in version_list"""
     clear()
     print("------------------------------------------------------------")
     print(f"JTSDK64 Generate QT Tool Chain Files {os.environ['VERSION']}")
@@ -84,9 +89,8 @@ def gentc():
 
         f.close()
 
+
 if __name__ == '__main__':
     make_dir()
     gentc()
     sys.exit(0)
-
-# End jtsdk-gentc.py
