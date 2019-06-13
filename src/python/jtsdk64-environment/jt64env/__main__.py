@@ -2,7 +2,7 @@ import os
 import sys
 
 from colorconsole import terminal
-
+from jt64env import __version__
 
 def clear():
     """Clear screen Windows or *Nix"""
@@ -25,22 +25,22 @@ def main():
     screen.reset_colors()
     print("------------------------------------------------------------")
     print("\nJTSDK Variables\n")
-    print(f"  JTSDK Version ..: {env_item('JTSDK_VERSION')}")
-    print(f"  JTSDK Home .....: {env_item('JTSDK_HOME')}")
-    print(f"  JTSDK Config ...: {env_item('JTSDK_CONFIG')}")
-    print(f"  JTSDK Data .....: {env_item('JTSDK_DATA')}")
-    print(f"  JTSDK Tmp ......: {env_item('JTSDK_TMP')}")
-    print(f"  JTSDK Scripts ..: {env_item('JTSDK_SCRIPTS')}")
+    print(f"  JT64 Env Script ..: {__version__}")
+    print(f"  JTSDK Version ....: {env_item('JTSDK_VERSION')}")
+    print(f"  JTSDK Home .......: {env_item('JTSDK_HOME')}")
+    print(f"  JTSDK Config .....: {env_item('JTSDK_CONFIG')}")
+    print(f"  JTSDK Data .......: {env_item('JTSDK_DATA')}")
+    print(f"  JTSDK Tmp ........: {env_item('JTSDK_TMP')}")
+    print(f"  JTSDK Scripts ....: {env_item('JTSDK_SCRIPTS')}")
     print("\nQT Variables\n")
-    print(f"  QT Version  ....: {env_item('QTV')}")
-    print(f"  QT Directory ...: {env_item('QTD')}")
-    print(f"  QT Plugins .....: {env_item('QTP')}")
-    print(f"  GCC Directory ..: {env_item('GCCD')}")
+    print(f"  QT Version  .....: {env_item('QTV')}")
+    print(f"  QT Directory ....: {env_item('QTD')}")
+    print(f"  QT Plugins ......: {env_item('QTP')}")
+    print(f"  GCC Directory ...: {env_item('GCCD')}")
     print("\nConfiguration Options\n")
-    print(f"  Python Tools ...: {env_item('PYTOOLS')}")
-    print(f"  PostgreSQL .....: {env_item('POSTGRES')}")
-    print(f"  Unix Tools .....: {env_item('UNIXTOOLS')}")
-
+    print(f"  Python Tools ....: {env_item('PYTOOLS')}")
+    print(f"  PostgreSQL ......: {env_item('POSTGRES')}")
+    print(f"  Unix Tools ......: {env_item('UNIXTOOLS')}")
 
 if __name__ == '__main__':
     main()
