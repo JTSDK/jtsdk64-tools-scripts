@@ -2,7 +2,7 @@
 
 | Application Data ||
 | ---| --- |
-| Package             | `jt64version`
+| Package             | `jt64gentc`
 | Version             | 0.0.1
 | Topic               | Communications, Ham Radio
 | Development Status  | 2 - Beta
@@ -20,8 +20,8 @@ This package is in `Beta`. The package was tested using
 
 ## Description
 
-Simple [Python][] script to print application versions associated with
-[JTSDK64-Tools][]
+Simple [Python][] script to generate QT Tool Chain files based on a list of
+supported versions.
 
 ## Requirements
 
@@ -42,23 +42,23 @@ Open a condole, and type the following:
 conda activate jtpy
 
 # Install command: note the space after trailing /
-pip install -i https://test.pypi.org/simple/ jt64version
+pip install -i https://test.pypi.org/simple/ jt64gentc
 ```
 
 ## Usage
 
 ```bash
     Provides:
-      1. Prints JTSDK64 Version Variables
+      1. Generate Tool Chain files based on supported QT versions.
 
-    usage: jt64version
+    usage: jt64gentc
 
-      Print Application Variable Versions associated with `JTSDK64-Tools`
+      Created (x) number of file and places them in `JTSDK-Tool\tools\tcfiles`.
 ```
 
-| ![Application Versions](docs/images/jt64version.PNG?raw=true) |
+| ![Application Versions](docs/images/jt64gentc.PNG?raw=true) |
 |:--:|
-| *JTSDK64 Application Versions* |
+| *JTSDK64 Generate Tool Chain Files* |
 
 ## Uninstall
 
@@ -69,7 +69,7 @@ Open a condole, and type the following:
 conda activate jtpy
 
 # Uninstall command
-pip uninstall jt64version
+pip uninstall jt64gentc
 ```
 
 [Install Miniconda Python]: https://github.com/KI7MT/jtsdk-dotnet-core/wiki/Install-Python

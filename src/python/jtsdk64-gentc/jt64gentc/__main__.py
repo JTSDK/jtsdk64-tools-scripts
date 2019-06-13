@@ -34,7 +34,7 @@ def make_dir():
         os.makedirs(tc_dir)
 
 
-def gentc():
+def main():
     """Generates Tool Chain files for each QT version in version_list"""
     clear()
     screen = terminal.get_terminal(conEmu=False)
@@ -97,5 +97,5 @@ def gentc():
 
 if __name__ == '__main__':
     make_dir()
-    gentc()
+    main()
     sys.exit(0)
