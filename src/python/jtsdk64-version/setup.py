@@ -8,23 +8,23 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name=jt64env.__title__,
-    version=jt64env.__version__,
-    author=jt64env.__author__,
-    license=jt64env.__license__,
-    author_email=jt64env.__author__,
+    name=jt64version.__title__,
+    version=jt64version.__version__,
+    author=jt64version.__author__,
+    license=jt64version.__license__,
+    author_email=jt64version.__author__,
     long_description=long_description,
     long_description_content_type="text/markdown",
 
     python_requires='>=3.5.*',
     project_urls={
+        'JT64 Version Source': 'https://github.com/KI7MT/jtsdk64-tools-scripts',
         'Packaging tutorial': 'https://packaging.python.org/tutorials/distributing-packages/',
-        'jt64env source': 'https://github.com/KI7MT/jtsdk64-tools-scripts',
     },
     packages=setuptools.find_packages(),
     install_requires=['colorconsole'],
     entry_points={
-        'console_scripts': ['jt64env = jt64env.__main__:main'],
+        'console_scripts': ['jt64version = jt64version.__main__:main'],
     },
     classifiers=[
         "Natural Language :: English",

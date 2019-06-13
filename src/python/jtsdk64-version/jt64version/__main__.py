@@ -1,7 +1,7 @@
 import os
 import sys
-import jt64version
 
+from jt64version import __version__
 from colorconsole import terminal
 from subprocess import PIPE
 from subprocess import run
@@ -144,23 +144,25 @@ def main():
     screen.reset_colors()
     print("--------------------------------------------------\n")
     print(f" QT {os.environ['QTV']} Tool Chain\n")
-    print(f"  Qt Version    : {qtver}")
-    print(f"  Qmake         : {get_qmake_version()}")
-    print(f"  GCC           : {get_gcc_version()}")
-    print(f"  Mingw32-Make  : {get_mingw32_make_version()}")
-    print(f"  TC Files      : {list}")
+    print(f"   JT64 Version  : {__version__}")
+    print(f"   Qt Version    : {qtver}")
+    print(f"   Qt Version    : {qtver}")
+    print(f"   Qmake         : {get_qmake_version()}")
+    print(f"   GCC           : {get_gcc_version()}")
+    print(f"   Mingw32-Make  : {get_mingw32_make_version()}")
+    print(f"   TC Files      : {list}")
     print("\n General Purpose Tools\n")
-    print(f"  Cmake         : {get_cmake_version()}")
-    print(f"  Asciidoctor   : {get_asciidoctor_version()}")
-    print(f"  Bash          : {get_bash_version()}")
-    print(f"  FFTW          : {get_fftw_version()}")
-    print(f"  Git           : {get_git_version()}")
-    print(f"  Libusb        : {get_libusb_version()}")
-    print(f"  NSIS          : {get_nsis_version()}")
-    print(f"  Pkg-Config    : {get_pkgconfig_version()}")
-    print(f"  PostgreSQL    : {get_psql_version()}")
-    print(f"  SQLite3       : {get_sqlite_version()}")
-    print(f"  Subversion    : {get_subversion_version()}")
+    print(f"   Cmake         : {get_cmake_version()}")
+    print(f"   Asciidoctor   : {get_asciidoctor_version()}")
+    print(f"   Bash          : {get_bash_version()}")
+    print(f"   FFTW          : {get_fftw_version()}")
+    print(f"   Git           : {get_git_version()}")
+    print(f"   Libusb        : {get_libusb_version()}")
+    print(f"   NSIS          : {get_nsis_version()}")
+    print(f"   Pkg-Config    : {get_pkgconfig_version()}")
+    print(f"   PostgreSQL    : {get_psql_version()}")
+    print(f"   SQLite3       : {get_sqlite_version()}")
+    print(f"   Subversion    : {get_subversion_version()}")
     print('''
  JTSDK64 Tools Version v3.1.0 Alpha
  Copyright (C) 2013-2019, GPLv3, Greg Beam, KI7MT

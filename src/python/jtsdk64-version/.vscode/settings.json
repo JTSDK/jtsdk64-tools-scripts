@@ -1,3 +1,17 @@
 {
-    "python.pythonPath": "D:\\JTSDK64-Tools\\tools\\python\\envs\\jtpy\\python.exe"
+    "python.pythonPath": "D:\\JTSDK64-Tools\\tools\\python\\envs\\jtpy\\python.exe",
+    "cSpell.words": [
+        "cmake",
+        "fftw",
+        "get",
+        "list",
+        "makensis",
+        "mingw",
+        "nsis",
+        "psql",
+        "qmake",
+        "qtver",
+        "tcfiles",
+        "version"
+    ]
 }
