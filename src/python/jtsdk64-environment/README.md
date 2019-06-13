@@ -38,7 +38,7 @@ During `Beta` testing, installation will pull yhe application from
 Open a condole, and type the following:
 
 ```bash
-# If using JTSDK-Tools, active jtsdk-py first
+# If using JTSDK-Tools, active jtpy first
 conda activate jtpy
 
 # Install command: note the space after trailing /
@@ -52,23 +52,27 @@ pip install -i https://test.pypi.org/simple/ jt64env
     Provides:
       1. Prints JTSDK64 Environment Variables
 
-    usage: jtenv
+    usage: jt64env
 
       Print Environment Variables associated with `JTSDK64-Tools`
 ```
+
+| ![Set Environment](docs/images/jt64env.PNG?raw=true) |
+|:--:|
+| *JTSDK64 Environment Variables* |
 
 ## Uninstall
 
 Open a condole, and type the following:
 
 ```bash
-# If using JTSDK-Tools, active jtsdk-py first
-conda activate jtsdk-py
+# If using JTSDK64-Tools, active jtpy first
+conda activate jtpy
 
 # Uninstall command
 pip uninstall jt64env
-
 ```
+
 [Install Miniconda Python]: https://github.com/KI7MT/jtsdk-dotnet-core/wiki/Install-Python
 [JTSDK64-Tools]: https://github.com/KI7MT/jtsdk64-tools-scripts
 [test.pypi.org]: https://test.pypi.org/project/jt64env/

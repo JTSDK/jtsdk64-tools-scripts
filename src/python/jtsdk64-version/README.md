@@ -1,4 +1,4 @@
-# JTSDK64-Tools ( jt64env )
+# JTSDK64-Tools ( jt64version )
 
 | Application Data ||
 | ---| --- |
@@ -20,7 +20,7 @@ This package is in `Beta`. The package was tested using
 
 ## Description
 
-Simple [Python][] script to print applicaion versions associated with
+Simple [Python][] script to print application versions associated with
 [JTSDK64-Tools][]
 
 ## Requirements
@@ -38,7 +38,7 @@ During `Beta` testing, installation will pull yhe application from
 Open a condole, and type the following:
 
 ```bash
-# If using JTSDK64-Tools, active jtsdk-py first
+# If using JTSDK64-Tools, active jtpy first
 conda activate jtpy
 
 # Install command: note the space after trailing /
@@ -56,6 +56,10 @@ pip install -i https://test.pypi.org/simple/ jt64version
       Print Application Variable Versions associated with `JTSDK64-Tools`
 ```
 
+| ![Application Versions](docs/images/jt64version.PNG?raw=true) |
+|:--:|
+| *JTSDK64 Application Versions* |
+
 ## Uninstall
 
 Open a condole, and type the following:
@@ -66,8 +70,8 @@ conda activate jtpy
 
 # Uninstall command
 pip uninstall jt64version
-
 ```
+
 [Install Miniconda Python]: https://github.com/KI7MT/jtsdk-dotnet-core/wiki/Install-Python
 [JTSDK64-Tools]: https://github.com/KI7MT/jtsdk64-tools-scripts
 [test.pypi.org]: https://test.pypi.org/project/jt64version/

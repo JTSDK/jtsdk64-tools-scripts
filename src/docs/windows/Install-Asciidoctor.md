@@ -37,7 +37,7 @@ cd /d (C|D):\JTSDK-Tools\tools\ruby\2.5.1-2\bin
 setrbvars.cmd
 ```
 
-| ![Set Environment](images/asciidoctor/asciidoctor.1.PNG?raw=true) |
+| ![Environment Variables](images/asciidoctor/asciidoctor.1.PNG?raw=true) |
 |:--:|
 | *Set Environment Variables* |
 
