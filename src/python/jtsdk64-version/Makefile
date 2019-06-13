@@ -2,11 +2,11 @@
 #
 # Prerequsists : GNU Make, Python, Setuptools, Twine
 
-PROGRAM	:= jt64env
+PROGRAM	:= jt64version
 AUTHOR	:= Greg Beam, KI7MT
 LICENSE	:= GPLv3
-BUGS	:= https://github.com/KI7MT/python-pypi-packages/issues
-WEB	:= https://github.com/KI7MT/python-pypi-packages
+BUGS	:= https://github.com/KI7MT/jtsdk64-tools-scripts/issues
+WEB	:= https://github.com/KI7MT/jtsdk64-tools-scripts
 
 # make programs
 PYTHON	:= $(shell which python)
@@ -23,8 +23,8 @@ REQ	:= $(PWD)/requirements.txt
 REQDEV	:= $(PWD)/requirements-dev.txt
 
 # publication  install commands
-TPUB	:= -i https://test.pypi.org/simple/ jt64env
-PPUB	:= -i https://pypi.org/simple/ jtenv
+TPUB	:= -i https://test.pypi.org/simple/ jt64version
+PPUB	:= -i https://pypi.org/simple/ jt64version
 
 ## publication end points
 PUBTEST	:= upload --repository-url https://test.pypi.org/legacy/ dist/*

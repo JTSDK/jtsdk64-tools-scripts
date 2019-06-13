@@ -1,12 +1,10 @@
 import os
 import sys
+import jt64version
 
 from colorconsole import terminal
-
 from subprocess import PIPE
 from subprocess import run
-
-# TODO: Add version numbers to __init__.py for common imports
 
 
 def clear():
