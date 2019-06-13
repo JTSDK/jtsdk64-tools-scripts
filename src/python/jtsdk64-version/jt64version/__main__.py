@@ -8,6 +8,7 @@ from subprocess import run
 
 # TODO: Add version numbers to __init__.py for common imports
 
+
 def clear():
     """Clear Screen Function"""
     os.system('cls' if os.name == 'nt' else 'clear')
