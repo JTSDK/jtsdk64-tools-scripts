@@ -1,4 +1,4 @@
-# JTSDK-Tools ( jt64env )
+# JTSDK64-Tools ( jt64env )
 
 | Application Data ||
 | ---| --- |
@@ -6,22 +6,11 @@
 | Version             | 0.0.1
 | Topic               | Communications, Ham Radio
 | Development Status  | 2 - Beta
-| Distributions       | Windows, Linux, MacOS
+| Distributions       | Windows, Linux
 | Arch                | x86-64
 | Python              | Version >= 3.5
 | Dependencies        | Standard Python Library, colorconsole
 | Virtual Environment | [Miniconda Python]
-
-## Page Index
-
-- [JTSDK-Tools ( jt64env )](#jtsdk-tools--jt64env)
-  - [Page Index](#page-index)
-  - [Development Status](#development-status)
-  - [Description](#description)
-  - [Requirements](#requirements)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Uninstall](#uninstall)
 
 ## Development Status
 
@@ -61,7 +50,7 @@ pip install -i https://test.pypi.org/simple/ jtenv
 
 ```bash
     Provides:
-      1. Prints JTSDK64 Environment variables
+      1. Prints JTSDK64 Environment Variables
 
     usage: jtenv
 
@@ -80,9 +69,9 @@ conda activate jtsdk-py
 pip uninstall jtenv
 
 ```
-[Install Anaconda Python]: https://github.com/KI7MT/jtsdk-dotnet-core/wiki/Install-Python
+[Install Miniconda Python]: https://github.com/KI7MT/jtsdk-dotnet-core/wiki/Install-Python
 [JTSDK64-Tools]: https://github.com/KI7MT/jtsdk64-tools-scripts
-[test.pypi.org]: https://test.pypi.org/project/jtenv/
+[test.pypi.org]: https://test.pypi.org/project/jt64env/
 [PyPi]: https://pypi.org/
 [Miniconda Python]: https://docs.conda.io/en/latest/miniconda.html
 [Python]: https://www.python.org/
