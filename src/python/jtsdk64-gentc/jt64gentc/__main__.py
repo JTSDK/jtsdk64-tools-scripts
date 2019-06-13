@@ -1,8 +1,10 @@
-import os, sys, datetime
+import os
+import sys
+import datetime
 import contextlib
 
-# Supported QT version List
-version_list = ['5.12.2', '5.12.3']
+from jt64gentc import version_list
+from colorconsole import terminal
 
 # process variables
 base_path = os.environ["JTSDK_HOME"]
@@ -35,8 +37,11 @@ def make_dir():
 def gentc():
     """Generates Tool Chain files for each QT version in version_list"""
     clear()
+    screen = terminal.get_terminal(conEmu=False)
     print("------------------------------------------------------------")
+    screen.set_color(3, 0)
     print(f"JTSDK64 Generate QT Tool Chain Files {os.environ['VERSION']}")
+    screen.reset_colors()
     print("------------------------------------------------------------\n")
 
     # loop through each supported QT version adn generate TC file
@@ -45,7 +50,7 @@ def gentc():
         print(f"* Generating TC File for QT v{i}")
         file_name = "qt" + i.replace(".", "") + ".tc"
         file = os.path.join(tc_dir, file_name)
-        
+
         # Qt Directory back slash
         qtdir = os.path.join(base_path, "tools", "Qt", i, "mingw73_64", "bin")
         qtdir = qtdir.replace('\\', '/')
@@ -53,7 +58,7 @@ def gentc():
         # Set GCCD: both 5.12.2 and 5.12.3 use GCC 730_64
         gccd = os.path.join(base_path, "tools", "Qt", "Tools", "mingw730_64", "bin")
         gccd = gccd.replace('\\', '/')
-        
+
         hamlib_dir = os.path.join(hamlib_base_path, i)
         hamlib_dir = hamlib_dir.replace('\\', '/')
 
@@ -61,7 +66,7 @@ def gentc():
         with contextlib.suppress(FileNotFoundError):
             os.remove(file)
 
-        # Open a file
+        # Open file
         with open(file, "w") as f:
             f.write(f"# -------------------------------------------------------\n")
             f.write(f"# Tool Chain File for Qt {i}\n")
