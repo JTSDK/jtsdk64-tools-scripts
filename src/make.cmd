@@ -1,11 +1,11 @@
 ::-----------------------------------------------------------------------------::
 :: Name .........: make.cmd
-:: Project ......: Part of the JTSDK Version 3.0.0 Project
-:: Description ..: JTSDK.NetCore Build script
+:: Project ......: Part of the JTSDK Version 3.1.0 Project
+:: Description ..: JTSDK64 Makefile
 :: Project URL ..: https://github.com/KI7MT
 ::
 :: Author .......: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
-:: Copyright ....: Copyright (C) 2018 Greg Beam, KI7MT
+:: Copyright ....: Copyright (C) 2013-2019 Greg Beam, KI7MT
 :: License ......: GPL-3
 ::
 :: make.cmd is free software: you can redistribute it and/or modify it
@@ -121,28 +121,6 @@ robocopy %CD%\msys2\bin %JTSDK_HOME%\tools\msys2\usr\bin /NFL /NDL /NJH /NJS /nc
 ECHO   Install Win32 Root Files
 robocopy %CD%\root %JTSDK_HOME% /NFL /NDL /NJH /NJS /nc /ns /np
 POPD
-
-:: Change Directories to JTSDK.Pgsql
-::PUSHD %CD%\src\JTSDK.Pgsql
-::ECHO   Install Pgsql Scipts
-::robocopy %CD%\R-DaaS %JTSDK_HOME%\tools\scripts\sql\R-DaaS /E /NFL /NDL /NJH /NJS /nc /ns /np
-::POPD
-
-:: Change Directories to JTSDK.Python
-::PUSHD %CD%\src\JTSDK.Python\scripts
-::ECHO   Install Python Scipts
-::robocopy %CD%\ %JTSDK_HOME%\tools\scripts\python /E /NFL /NDL /NJH /NJS /nc /ns /np *.py
-::POPD
-
-:: NO LONGER USED, See: jtsdk-java-utils project
-:: Conditional Build of Java Apps / Scripts
-::IF EXIST %JTSDK_HOME%\java.tools (
-::PUSHD %CD%\src\JTSDK.Java\scripts
-::ECHO   Compiling Java Apps
-::for /r %%i in (*.java) do javac -d %JTSDK_HOME%\tools\scripts\java %%i
-::)
-::ECHO.
-::POPD
 
 :: Finished installation
 ECHO   Finished

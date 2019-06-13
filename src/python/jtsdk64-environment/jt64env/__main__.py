@@ -1,25 +1,6 @@
-# Name ..............: jtsdk-help.py
-# Description .......: Print JTSDK64 Help Message
-# Author ............: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
-# Copyright .........: Copyright (C) 2013-2019 Greg Beam, KI7MT
-# License ...........: GPL-3
-#
-# jtsdk-help is free software: you can redistribute it and/or modify it
-# under the terms of the GNU General Public License as published by the Free
-# Software Foundation either version 3 of the License, or (at your option) any
-# later version. 
-#
-# jtsdk-help is distributed in the hope that it will be useful, but WITHOUT
-# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-# FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
-# details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 import os, sys
-
 from colorconsole import terminal
+
 
 """[Console Color Index]
     Number  Color
@@ -40,18 +21,25 @@ from colorconsole import terminal
     14 	    Yellow
     15 	    White
 """
+
+
 def clear():
+    """Clear screen Windows or *Nix"""
     os.system('cls' if os.name == 'nt' else 'clear')
 
+
 def env_item(value):
+    """Return status of environment variable"""
     status = os.getenv(value)
     return status
 
+
 def main():
+    """Screen print environment variables"""
     clear()
     screen = terminal.get_terminal(conEmu=False)
     print("------------------------------------------------------------")
-    screen.set_color(3,0)
+    screen.set_color(3, 0)
     print(f"JTSDK64 Tools {os.environ['VERSION']} Environment Variables")
     screen.reset_colors()
     print("------------------------------------------------------------")
@@ -76,5 +64,3 @@ def main():
 if __name__ == '__main__':
     main()
     sys.exit(0)
-
-# End jtsdk-env-message.py
