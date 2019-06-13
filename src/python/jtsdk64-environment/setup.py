@@ -1,6 +1,5 @@
 import os
 import setuptools
-
 import jt64env
 
 here = os.path.dirname(os.path.abspath(__file__))

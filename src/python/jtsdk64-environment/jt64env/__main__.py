@@ -42,6 +42,7 @@ def main():
     print(f"  PostgreSQL ......: {env_item('POSTGRES')}")
     print(f"  Unix Tools ......: {env_item('UNIXTOOLS')}")
 
+
 if __name__ == '__main__':
     main()
     sys.exit(0)
