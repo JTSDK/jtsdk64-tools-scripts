@@ -27,7 +27,6 @@
 SET JTSDK_VERSION=3.1.0 Alpha
 @chcp 1252 >NUL 2>&1
 @SET LANG=en_US
-@MODE CON: COLS=85 LINES=45
 
 :: RESET TOOL STATUS
 SET POSTGRES=Not Installed
@@ -175,13 +174,14 @@ GOTO PY_CHECK
 ::------------------------------------------------------------------------------
 
 :PY_CHECK
-IF EXIST "%JTSDK_HOME%\tools\jtsdkpy\Scripts\activate.bat" (GOTO PY_TOOLS)
+IF EXIST "%JTSDK_HOME%\tools\python\Scripts\activate.bat" (GOTO PY_TOOLS)
 GOTO SET_FINAL
 
 :PY_TOOLS
 ECHO ^* Setting Python Tool Paths
 SET PYTOOLS=Installed
-call %JTSDK_HOME%\tools\jtsdkpy\Scripts\activate.bat
+call %JTSDK_HOME%\tools\python\Scripts\activate.bat D:\JTSDK64-Tools\tools\python
+call conda activate jtpy
 
 :: Add the python scripts directory to PATH
 SET JTSDK_PATH=%JTSDK_PATH%;%JTSDK_SCRIPTS%

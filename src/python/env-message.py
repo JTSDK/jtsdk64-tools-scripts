@@ -55,7 +55,7 @@ def main():
     print("--------------------------------------------------")
     print('{0:18}  {1}'.format("\nQT Version", os.environ["QTV"]))
     print('{0:17}  {1}'.format("Core Tools", os.environ["CORETOOLS"]))
-    print('{0:17}  {1}'.format("Python Version", os.environ["PYTOOLS"]))
+    print('{0:17}  {1}'.format("Python", os.environ["PYTOOLS"]))
     print('{0:17}  {1}'.format("Postgres", os.environ["POSTGRES"]))
     print('{0:17}  {1}'.format("Unix Tools", os.environ["UNIXTOOLS"]))
     screen.cprint(14, 0, "\nFor Command List, Type: jtsdk-help\n")
