@@ -1,11 +1,11 @@
 ::-----------------------------------------------------------------------------::
 :: Name .........: make.cmd
-:: Project ......: JTSDK-Tools ( wsprcsv )
+:: Project ......: JTSDK64 Tools Project
 :: Description ..: Windows Makefile (make.cmd)
-:: Project URL ..: https://github.com/ki7mt/python-pypi-packages/wsprcsv
+:: Project URL ..: https://github.com/ki7mt/jtsdk64-tools-scripts
 ::
 :: Author .......: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
-:: Copyright ....: Copyright (C) 2018-2019 Greg Beam, KI7MT
+:: Copyright ....: Copyright (C) 2013-2019 Greg Beam, KI7MT
 :: License ......: GPL-3
 ::
 :: make.cmd is free software: you can redistribute it and/or modify it
@@ -27,6 +27,7 @@
 ::     python
 ::     setuptools
 ::     twine
+::     colorconsole
 ::
 :: NOTES: 
 ::
@@ -38,7 +39,7 @@
 ::     For development requirements, use the requirments-dex.txt      
 
 :: Make File Variables
-SET app_name=wsprcsv
+SET app_name=jt64env
 SET pypitest=--repository-url https://test.pypi.org/legacy/ dist/*
 SET test_install=-i https://test.pypi.org/simple/ %app_name%
 SET prod_install=-i https://pypi.org/simple/ %app_name%

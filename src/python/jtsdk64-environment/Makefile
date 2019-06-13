@@ -2,7 +2,7 @@
 #
 # Prerequsists : GNU Make, Python, Setuptools, Twine
 
-PROGRAM	:= jtenv
+PROGRAM	:= jt64env
 AUTHOR	:= Greg Beam, KI7MT
 LICENSE	:= GPLv3
 BUGS	:= https://github.com/KI7MT/python-pypi-packages/issues
@@ -14,7 +14,7 @@ TWINE	:= $(shell which twine)
 PIP	:= $(shell which pip)
 RM	:= $(shell which rm)
 
-# application list
+# pip install command
 COMMAND	:= install -e .
 
 # requirments files
