@@ -2,7 +2,7 @@
 
 | Application Data ||
 | ---| --- |
-| Package             | `jt64env`
+| Package             | `jt64version`
 | Version             | 0.0.1
 | Topic               | Communications, Ham Radio
 | Development Status  | 2 - Beta
@@ -20,13 +20,13 @@ This package is in `Beta`. The package was tested using
 
 ## Description
 
-Simple [Python][] script to print various environment variables associated
-with [JTSDK64-Tools][]
+Simple [Python][] script to print applicaion versions associated with
+[JTSDK64-Tools][]
 
 ## Requirements
 
-- If running [JTSDK64-Tools][], install [Install Miniconda Python][] if you've not done so.
-- Any [Python][] version >= 3.5, virtual or native installation
+- If running [JTSDK64-Tools][], install [Install Miniconda Python][].
+- Any [Python][] version >= 3.5, virtual or native installation.
 - No special modules or distributions are required.
 
 ## Installation
@@ -38,23 +38,22 @@ During `Beta` testing, installation will pull yhe application from
 Open a condole, and type the following:
 
 ```bash
-# If using JTSDK-Tools, active jtsdk-py first
+# If using JTSDK64-Tools, active jtsdk-py first
 conda activate jtpy
 
 # Install command: note the space after trailing /
-pip install -i https://test.pypi.org/simple/ jtenv
-
+pip install -i https://test.pypi.org/simple/ jt64version
 ```
 
 ## Usage
 
 ```bash
     Provides:
-      1. Prints JTSDK64 Environment Variables
+      1. Prints JTSDK64 Version Variables
 
-    usage: jtenv
+    usage: jt64version
 
-      Print Environment Variables associated with `JTSDK64-Tools`
+      Print Application Variable Versions associated with `JTSDK64-Tools`
 ```
 
 ## Uninstall
@@ -63,15 +62,15 @@ Open a condole, and type the following:
 
 ```bash
 # If using JTSDK-Tools, active jtsdk-py first
-conda activate jtsdk-py
+conda activate jtpy
 
 # Uninstall command
-pip uninstall jtenv
+pip uninstall jt64version
 
 ```
 [Install Miniconda Python]: https://github.com/KI7MT/jtsdk-dotnet-core/wiki/Install-Python
 [JTSDK64-Tools]: https://github.com/KI7MT/jtsdk64-tools-scripts
-[test.pypi.org]: https://test.pypi.org/project/jt64env/
+[test.pypi.org]: https://test.pypi.org/project/jt64version/
 [PyPi]: https://pypi.org/
 [Miniconda Python]: https://docs.conda.io/en/latest/miniconda.html
 [Python]: https://www.python.org/

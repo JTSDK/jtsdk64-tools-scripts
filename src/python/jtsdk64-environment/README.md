@@ -42,7 +42,7 @@ Open a condole, and type the following:
 conda activate jtpy
 
 # Install command: note the space after trailing /
-pip install -i https://test.pypi.org/simple/ jtenv
+pip install -i https://test.pypi.org/simple/ jt64env
 
 ```
 
@@ -66,7 +66,7 @@ Open a condole, and type the following:
 conda activate jtsdk-py
 
 # Uninstall command
-pip uninstall jtenv
+pip uninstall jt64env
 
 ```
 [Install Miniconda Python]: https://github.com/KI7MT/jtsdk-dotnet-core/wiki/Install-Python
