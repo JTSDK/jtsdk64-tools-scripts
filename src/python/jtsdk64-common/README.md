@@ -2,7 +2,7 @@
 
 | Application Data ||
 | ---| --- |
-| Package             | `jt64comon`
+| Package             | `jt64common`
 | Version             | 0.0.1
 | Topic               | Communications, Ham Radio
 | Development Status  | 2 - Beta
