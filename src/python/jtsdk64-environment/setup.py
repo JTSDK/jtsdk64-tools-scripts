@@ -12,7 +12,7 @@ setuptools.setup(
     version=jt64env.__version__,
     author=jt64env.__author__,
     license=jt64env.__license__,
-    author_email=jt64env.__author__,
+    author_email=jt64env.__email__,
     long_description=long_description,
     long_description_content_type="text/markdown",
 
