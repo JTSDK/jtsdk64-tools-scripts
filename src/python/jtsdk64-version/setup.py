@@ -22,7 +22,7 @@ setuptools.setup(
         'Packaging tutorial': 'https://packaging.python.org/tutorials/distributing-packages/',
     },
     packages=setuptools.find_packages(),
-    install_requires=['colorconsole'],
+    install_requires=['colorconsole', 'jt64common'],
     entry_points={
         'console_scripts': ['jt64version = jt64version.__main__:main'],
     },

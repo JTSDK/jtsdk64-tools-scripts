@@ -22,7 +22,7 @@ setuptools.setup(
         'jt64env source': 'https://github.com/KI7MT/jtsdk64-tools-scripts',
     },
     packages=setuptools.find_packages(),
-    install_requires=['colorconsole'],
+    install_requires=['colorconsole', 'jt64common'],
     entry_points={
         'console_scripts': ['jt64env = jt64env.__main__:main'],
     },
