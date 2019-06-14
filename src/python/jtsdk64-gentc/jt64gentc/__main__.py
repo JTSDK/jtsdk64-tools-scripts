@@ -6,8 +6,10 @@ import argparse
 
 from colorconsole import terminal
 
+from jt64common import __qt_version_list__ as qt_version_list
 from jt64common.utils import clear
-from jt64gentc import version_list
+from jt64common.utils import supported_versions
+
 from jt64gentc import __version__
 from jt64gentc import __name__
 from jt64gentc import __summary__
@@ -39,21 +41,9 @@ def make_dir():
     if not os.path.exists(tc_dir):
         os.makedirs(tc_dir)
 
-def supported_versions():
-    """Print list of supported QT Frameworks"""
-    clear()
-    screen = terminal.get_terminal(conEmu=False)
-    print("------------------------------------")
-    screen.set_color(3, 0)
-    print(f"Supported QT Frameworks")
-    screen.reset_colors()
-    print("------------------------------------\n")
-    for item in version_list:
-        print(f" Version : {item}")
-
 
 def main():
-    """Generates Tool Chain files for each QT version in version_list"""
+    """Generates Tool Chain files for each QT version in qt_version_list"""
     clear()
 
     # setup the parser
@@ -86,7 +76,7 @@ def main():
         print("------------------------------------------------------------\n")
 
         # loop through each supported QT version adn generate TC file
-        for i in version_list:
+        for i in qt_version_list:
             time_now = datetime.datetime.now()
             print(f"* Generating TC File for QT v{i}")
             file_name = "qt" + i.replace(".", "") + ".tc"

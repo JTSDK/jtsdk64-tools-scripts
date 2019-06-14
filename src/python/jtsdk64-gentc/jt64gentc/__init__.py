@@ -8,6 +8,3 @@ __email__ = "ki7mt@yahoo.com"
 __summary__ = "Generates Tool Chain files for each QT version supported"
 
 __all__ = [__title__, __version__, __name__, __author__, __license__, __email__]
-
-# Supported QT version List
-version_list = ['5.12.2', '5.12.3']
