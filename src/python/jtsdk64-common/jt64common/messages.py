@@ -1,37 +1,13 @@
 import os
 import sys
 import glob
+
 from colorconsole import terminal
+from . utils import clear
 
 
-'''[Console Color Index]
-    Number  Color
-    0 	    Black
-    1 	    Blue
-    2 	    Green
-    3 	    Cyan
-    4 	    Red
-    5 	    Purple
-    6 	    Brown
-    7 	    Light gray
-    8 	    Dark gray
-    9 	    Light blue
-    10 	    Light Green
-    11 	    Light Cyan
-    12 	    Light Red
-    13 	    Light Purple
-    14 	    Yellow
-    15 	    White
-'''
-
-
-def clear():
-    """Clear Screen Function"""
-    os.system('cls' if os.name == 'nt' else 'clear')
-
-
-def main():
-    """JTSDK Main Menu Headder Message"""
+def main_header_message():
+    """JTSDK64 Main Menu Headder Message"""
     screen = terminal.get_terminal(conEmu=False)
     clear()
     print("--------------------------------------------------")
@@ -46,8 +22,4 @@ def main():
     print('{0:17}  {1}'.format("Unix Tools", os.environ["UNIXTOOLS"]))
     screen.cprint(14, 0, "\nFor Command List, Type: jtsdk-help\n")
     screen.reset_colors()
-
-
-if __name__ == '__main__':
-    main()
-    sys.exit(0)
+    # sys.exit(0) # required for Windows command prompt usage

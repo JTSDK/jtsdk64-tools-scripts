@@ -1,0 +1,2 @@
+DOSKEY jt64help = python -c "from jt64common.help import jt64_main_help; jt64_main_help()"
+DOSKEY menu = python -c "from jt64common.messages import main_header_message; main_header_message()"
