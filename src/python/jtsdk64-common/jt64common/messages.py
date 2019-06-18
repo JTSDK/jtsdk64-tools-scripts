@@ -22,4 +22,4 @@ def main_header_message():
     print('{0:17}  {1}'.format("Unix Tools", os.environ["UNIXTOOLS"]))
     screen.cprint(14, 0, "\nFor Command List, Type: jtsdk-help\n")
     screen.reset_colors()
-    # sys.exit(0) # required for Windows command prompt usage
+

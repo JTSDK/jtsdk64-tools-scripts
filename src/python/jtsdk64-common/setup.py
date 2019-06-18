@@ -22,7 +22,7 @@ setuptools.setup(
         'Packaging tutorial': 'https://packaging.python.org/tutorials/distributing-packages/',
     },
     packages=setuptools.find_packages(),
-    py_modules = ['help', 'messages', 'utils'],
+    py_modules=['help', 'messages', 'utils'],
     install_requires=['colorconsole'],
     classifiers=[
         "Natural Language :: English",

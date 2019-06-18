@@ -25,4 +25,4 @@ def jt64_main_help():
     print("\nShortcut Commands\n")
     print('{0:15}  {1}'.format("  home", "Return back to home directory"))
     print('{0:15}  {1}'.format("  msys2", "Launch MSYS2 Console"))
-    # sys.exit(0) # required for Windows command prompt usage
+

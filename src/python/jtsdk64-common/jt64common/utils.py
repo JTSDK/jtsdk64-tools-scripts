@@ -3,18 +3,28 @@ from colorconsole import terminal
 
 from jt64common import __qt_version_dict__
 
+from colorconsole import terminal
+from subprocess import PIPE
+from subprocess import run
+
+
 def clear():
-    """Clear Screen WIndows of *Nix"""
+    """Clear Screen Function"""
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def supported_versions():
-    """Print list of supported QT Frameworks from qt_version_dict"""
-    clear()
-    screen = terminal.get_terminal(conEmu=False)
-    print("---------------------------------------------")
-    screen.set_color(3, 0)
-    print(f"Supported QT Frameworks")
-    screen.reset_colors()
-    print("---------------------------------------------\n")
-    for k, v in __qt_version_dict__.items():
-        print(f" Version {k} using {v}")
+
+def pause():
+    """Simple pause command"""
+    os.system("pause")
+
+
+def cmd(command):
+    """Default Subprocess Command
+    Input
+        str("command as string")
+    Returns
+        Output from shell command
+    """
+    result = run(command, stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
+    return result.stdout
+
