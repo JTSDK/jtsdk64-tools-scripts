@@ -1,8 +1,8 @@
-# JTSDK64-Tools ( jt64version )
+# JTSDK64-Tools ( jt64setup )
 
 | Application Data ||
 | ---| --- |
-| Package             | `jt64version`
+| Package             | `jt64setup`
 | Version             | 0.0.1
 | Topic               | Communications, Ham Radio
 | Development Status  | 2 - Beta
@@ -20,57 +20,10 @@ This package is in `Beta`. The package was tested using
 
 ## Description
 
-Simple [Python][] script to print application versions associated with
-[JTSDK64-Tools][]
+Menu driven [Python][] script to install various applications used in the
+`JTSDK64-Tools` environment.
 
-## Requirements
-
-- If running [JTSDK64-Tools][], install [Install Miniconda Python][].
-- Any [Python][] version >= 3.5, virtual or native installation.
-- No special modules or distributions are required.
-
-## Installation
-
-During `Beta` testing, installation will pull yhe application from
-[test.pypi.org][]. After `Beta` testing, the package will be moved to the main
-[PyPi][] repository where it will remain.
-
-Open a condole, and type the following:
-
-```bash
-# If using JTSDK64-Tools, active jtpy first
-conda activate jtpy
-
-# Install command: note the space after trailing /
-pip install -i https://test.pypi.org/simple/ jt64version
-```
-
-## Usage
-
-```bash
-    Provides:
-      1. Prints JTSDK64 Version Variables
-
-    usage: jt64version
-
-      Print Application Variable Versions associated with `JTSDK64-Tools`
-```
-
-| ![Application Versions](docs/images/jt64version.PNG?raw=true) |
-|:--:|
-| *JTSDK64 Application Versions* |
-
-## Uninstall
-
-Open a condole, and type the following:
-
-```bash
-# If using JTSDK-Tools, active jtsdk-py first
-conda activate jtpy
-
-# Uninstall command
-pip uninstall jt64version
-```
+>NOTE: Remainder of doc is under development.
 
 [Install Miniconda Python]: https://github.com/KI7MT/jtsdk-dotnet-core/wiki/Install-Python
 [JTSDK64-Tools]: https://github.com/KI7MT/jtsdk64-tools-scripts
