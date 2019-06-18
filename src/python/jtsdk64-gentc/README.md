@@ -1,9 +1,9 @@
-# JTSDK64-Tools ( jt64version )
+# JTSDK64-Tools ( jt64gentc )
 
 | Application Data ||
 | ---| --- |
 | Package             | `jt64gentc`
-| Version             | 0.0.1
+| Version             | 0.0.3
 | Topic               | Communications, Ham Radio
 | Development Status  | 2 - Beta
 | Distributions       | Windows, Linux
@@ -25,15 +25,18 @@ supported versions.
 
 ## Requirements
 
+If using the self-contained executable, there is no requirement to
+[Install Miniconda Python][], otherwise, see the following:
+
 - If running [JTSDK64-Tools][], install [Install Miniconda Python][].
-- Any [Python][] version >= 3.5, virtual or native installation.
+- Any [Python][] version >= 3.5, virtual or native installation
 - No special modules or distributions are required.
 
 ## Installation
 
-During `Beta` testing, installation will pull yhe application from
-[test.pypi.org][]. After `Beta` testing, the package will be moved to the main
-[PyPi][] repository where it will remain.
+During `Beta` testing, the application will be delivered in a self-contained
+Windows executable; no action is required. To install manually, use the
+following steps:
 
 Open a condole, and type the following:
 
@@ -48,12 +51,15 @@ pip install -i https://test.pypi.org/simple/ jt64gentc
 ## Usage
 
 ```bash
-    Provides:
-      1. Generate Tool Chain files based on supported QT versions.
+    In the console, type: jt64env
 
-    usage: jt64gentc
+    Generates Tool Chain files based on supported QT versions. Created files
+    are placed in the `JTSDK-Tool\tools\tcfiles` directory.
 
-      Created (x) number of file and places them in `JTSDK-Tool\tools\tcfiles`.
+    optional arguments:
+      -h, --help       show this help message and exit
+      -s, --supported  list supported QT versions
+      -v, --version    display module version
 ```
 
 | ![Application Versions](docs/images/jt64gentc.PNG?raw=true) |
@@ -62,10 +68,11 @@ pip install -i https://test.pypi.org/simple/ jt64gentc
 
 ## Uninstall
 
-Open a condole, and type the following:
+This action apply's only to those that installed `jt64gentc` using `pip`.
 
 ```bash
-# If using JTSDK-Tools, active jtsdk-py first
+# JTSDK64-Tools Env and type the following.
+# Ensure jtpy is the active Python environment
 conda activate jtpy
 
 # Uninstall command

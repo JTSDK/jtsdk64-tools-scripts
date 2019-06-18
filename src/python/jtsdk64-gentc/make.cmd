@@ -11,7 +11,7 @@
 :: make.cmd is free software: you can redistribute it and/or modify it
 :: under the terms of the GNU General Public License as published by the Free
 :: Software Foundation either version 3 of the License, or (at your option) any
-:: later version. 
+:: later version.
 ::
 :: make.cmd is distributed in the hope that it will be useful, but WITHOUT
 :: ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
@@ -29,14 +29,14 @@
 ::     twine
 ::     colorconsole
 ::
-:: NOTES: 
+:: NOTES:
 ::
 ::   For Package Requirments
 ::     If you have runtime package requirements, add the file "requirements.txt"
-::     to the root of the distribution. 
+::     to the root of the distribution.
 ::
 ::   For Development Requirements
-::     For development requirements, use the requirments-dex.txt      
+::     For development requirements, use the requirments-dex.txt
 
 :: Make File Variables
 SET app_name=jt64gentc
@@ -51,6 +51,7 @@ SET requirements-%CD%\dev=requirements-dev.txt
 IF /I [%1]==[clean] ( GOTO _CLEAN )
 IF /I [%1]==[distclean] ( GOTO _DISTCLEAN )
 IF /I [%1]==[dist] ( GOTO _DIST )
+IF /I [%1]==[pyinstaller] ( GOTO _PYINSTALLER )
 IF /I [%1]==[install] ( GOTO _INSTALL )
 IF /I [%1]==[uninstall] ( GOTO _UNINSTALL )
 IF /I [%1]==[pubtest] ( GOTO _PUBTEST )
@@ -85,6 +86,9 @@ rmdir /s /q .\tools > NUL 2>&1
 rmdir /s /q .\src > NUL 2>&1
 rmdir /s /q .\scripts > NUL 2>&1
 rmdir /s /q .\tmp > NUL 2>&1
+rmdir /s /q .\pyinstaller > NUL 2>&1
+rmdir /s /q .\__pycache__ > NUL 2>&1
+del /f /q .\%app_name%.spec > NUL 2>&1
 GOTO EOF
 
 :: Install application
@@ -96,6 +100,21 @@ ECHO ----------------------------------------
 ECHO.
 ECHO Installing Package: %app_name%
 pip install ^-e .
+ECHO.
+ECHO Finished
+GOTO EOF
+
+:: Generate Pyinstaller Binary
+:_PYINSTALLER
+CLS
+ECHO ---------------------------------------------
+ECHO  Generate %app_name%.exe with Pyinstaller
+ECHO ---------------------------------------------
+ECHO.
+ECHO Generating Pyinstaller Binary for : %app_name%.exe
+pyinstaller cli.py -F -c -n %app_name% --clean ^
+--workpath=./pyinstaller/build ^
+--distpath=./pyinstaller/dist
 ECHO.
 ECHO Finished
 GOTO EOF
@@ -155,6 +174,8 @@ ECHO.
 ECHO Creating Package: %app_name%
 python setup.py sdist bdist_wheel
 ECHO.
+ECHO Creating Pyinstaller Package: %app_name%
+ECHO.
 ECHO Finished
 GOTO EOF
 
@@ -165,12 +186,12 @@ ECHO ----------------------------------------
 ECHO  Publishing to PyPi test Site
 ECHO ----------------------------------------
 ECHO.
-ECHO Plublishing Package: %app_name%
+ECHO Publishing Package: %app_name%
 twine upload %pypitest%
 
 :: If the esit status was not 0, for to test publish error
-IF %ERRORLEVEL% NEQ 0 ( 
-   GOTO _TEST_PUBLISH_ERROR 
+IF %ERRORLEVEL% NEQ 0 (
+   GOTO _TEST_PUBLISH_ERROR
 )
 ECHO.
 ECHO To install ^[ %app_name% ^] from ^( test.pypi.org ^)^, run the
@@ -193,8 +214,8 @@ ECHO Plublishing Package: %app_name%
 twine upload %pypiprod%
 
 :: If the exit status was not 0, goto publish error
-IF %ERRORLEVEL% NEQ 0 ( 
-   GOTO _PUBLISH_ERROR 
+IF %ERRORLEVEL% NEQ 0 (
+   GOTO _PUBLISH_ERROR
 )
 ECHO.
 ECHO To install ^[ %app_name% ^] from ^( pypi.org ^)^, run the
@@ -222,15 +243,16 @@ ECHO ----------------------------------------
 ECHO.
 ECHO  The build script takes one option^:
 ECHO.
-ECHO    clean      :  clean the build tree
-ECHO    distclean  :  clean distribution files adn folders
-ECHO    dist       :  generate distribution wheel
-ECHO    install    :  install the application locally
-ECHO    uninstall  :  uninstall the application
-ECHO    pubtest    :  publish app to test.pypi.org
-ECHO    publish    :  publish app to pypi.org
-ECHO    setup      :  pip install requirements.txt
-ECHO    setupdev   :  pip install requirements-dev.txt
+ECHO    clean       :  clean the build tree
+ECHO    distclean   :  clean distribution files adn folders
+ECHO    dist        :  generate distribution wheel
+ECHO    install     :  install the application locally
+ECHO    pyinstaller :  generate self-contained executable
+ECHO    uninstall   :  uninstall the application
+ECHO    pubtest     :  publish app to test.pypi.org
+ECHO    publish     :  publish app to pypi.org
+ECHO    setup       :  pip install requirements.txt
+ECHO    setupdev    :  pip install requirements-dev.txt
 ECHO.
 ECHO    Example:
 ECHO      make setup

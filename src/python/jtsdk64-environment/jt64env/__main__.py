@@ -3,9 +3,13 @@ import sys
 import argparse
 
 from colorconsole import terminal
-from jt64common.utils import clear
 from jt64env import __version__
 from jt64env import __summary__
+
+
+def clear():
+    """Clear Screen Function"""
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 
 def env_item(value):
@@ -20,14 +24,14 @@ def main():
 
     # setup the parser
     parser = argparse.ArgumentParser(add_help=True, description=__summary__)
-    parser.add_argument('-v', '--version', 
+    parser.add_argument('-v', '--version',
                         action='version',
                         version='%(prog)s ' + __version__,
-                        help='display module version')  
+                        help='display module version')
 
     # process the arguments
     args = parser.parse_args()
-    
+
     screen = terminal.get_terminal(conEmu=False)
     print("------------------------------------------------------------")
     screen.set_color(3, 0)

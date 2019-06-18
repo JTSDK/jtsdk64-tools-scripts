@@ -1,0 +1,2 @@
+pyinstaller ./jt64version/__cli__.py -F -c -n jt64version --workpath=/pyinstaller/build --distpath=./pyinstaller/dist
+pyinstaller ./jt64env/__cli__.py -F -c -n jt64env --workpath=/pyinstaller/build --distpath=./pyinstaller/dist

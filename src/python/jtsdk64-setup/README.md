@@ -3,7 +3,7 @@
 | Application Data ||
 | ---| --- |
 | Package             | `jt64version`
-| Version             | 0.0.3
+| Version             | 0.0.1
 | Topic               | Communications, Ham Radio
 | Development Status  | 2 - Beta
 | Distributions       | Windows, Linux
@@ -25,18 +25,15 @@ Simple [Python][] script to print application versions associated with
 
 ## Requirements
 
-If using the self-contained executable, there is no requirement to
-[Install Miniconda Python][], otherwise, see the following:
-
 - If running [JTSDK64-Tools][], install [Install Miniconda Python][].
-- Any [Python][] version >= 3.5, virtual or native installation
+- Any [Python][] version >= 3.5, virtual or native installation.
 - No special modules or distributions are required.
 
 ## Installation
 
-During `Beta` testing, the application will be delivered in a self-contained
-Windows executable; no action is required. To install manually, use the
-following steps:
+During `Beta` testing, installation will pull yhe application from
+[test.pypi.org][]. After `Beta` testing, the package will be moved to the main
+[PyPi][] repository where it will remain.
 
 Open a condole, and type the following:
 
@@ -51,24 +48,24 @@ pip install -i https://test.pypi.org/simple/ jt64version
 ## Usage
 
 ```bash
-    In the console, type: jt64version
+    Provides:
+      1. Prints JTSDK64 Version Variables
 
-    Print Application Versions associated with `JTSDK64-Tools`
+    usage: jt64version
 
-    optional arguments:
-      None
+      Print Application Variable Versions associated with `JTSDK64-Tools`
 ```
 
 | ![Application Versions](docs/images/jt64version.PNG?raw=true) |
 |:--:|
 | *JTSDK64 Application Versions* |
 
+## Uninstall
 
-This action apply's only to those that installed `jt64version` using `pip`.
+Open a condole, and type the following:
 
 ```bash
-# JTSDK64-Tools Env and type the following.
-# Ensure jtpy is the active Python environment
+# If using JTSDK-Tools, active jtsdk-py first
 conda activate jtpy
 
 # Uninstall command

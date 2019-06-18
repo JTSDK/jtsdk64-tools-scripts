@@ -3,7 +3,7 @@
 | Application Data ||
 | ---| --- |
 | Package             | `jt64env`
-| Version             | 0.0.1
+| Version             | 0.0.3
 | Topic               | Communications, Ham Radio
 | Development Status  | 2 - Beta
 | Distributions       | Windows, Linux
@@ -20,20 +20,23 @@ This package is in `Beta`. The package was tested using
 
 ## Description
 
-Simple [Python][] script to print various environment variables associated
-with [JTSDK64-Tools][]
+Simple [Python][] self-contained executable which prints various environment
+variables associated with [JTSDK64-Tools][]
 
 ## Requirements
 
-- If running [JTSDK64-Tools][], install [Install Miniconda Python][] if you've not done so.
+If using the self-contained executable, there is no requirement to
+[Install Miniconda Python][], otherwise, see the following:
+
+- If running [JTSDK64-Tools][], install [Install Miniconda Python][].
 - Any [Python][] version >= 3.5, virtual or native installation
 - No special modules or distributions are required.
 
 ## Installation
 
-During `Beta` testing, installation will pull yhe application from
-[test.pypi.org][]. After `Beta` testing, the package will be moved to the main
-[PyPi][] repository where it will remain.
+During `Beta` testing, the application will be delivered in a self-contained
+Windows executable; no action is required. To install manually, use the
+following steps:
 
 Open a condole, and type the following:
 
@@ -43,18 +46,18 @@ conda activate jtpy
 
 # Install command: note the space after trailing /
 pip install -i https://test.pypi.org/simple/ jt64env
-
 ```
 
 ## Usage
 
 ```bash
-    Provides:
-      1. Prints JTSDK64 Environment Variables
+    In the console, type: jt64env
 
-    usage: jt64env
+    Lists all available JTSDK-Tools Environment Variables
 
-      Print Environment Variables associated with `JTSDK64-Tools`
+    optional arguments:
+      -h, --help     show this help message and exit
+      -v, --version  display module version
 ```
 
 | ![Set Environment](docs/images/jt64env.PNG?raw=true) |
@@ -63,10 +66,11 @@ pip install -i https://test.pypi.org/simple/ jt64env
 
 ## Uninstall
 
-Open a condole, and type the following:
+This action apply's only to those that installed `jt64env` using `pip`.
 
 ```bash
-# If using JTSDK64-Tools, active jtpy first
+# JTSDK64-Tools Env and type the following.
+# Ensure jtpy is the active Python environment
 conda activate jtpy
 
 # Uninstall command
