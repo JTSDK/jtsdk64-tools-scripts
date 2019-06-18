@@ -9,4 +9,4 @@ __email__ = "ki7mt@yahoo.com"
 # TODO: Add Python Installation Functions
 # TODO: Add Qt Installation Functions
 # TODO: Add JT64 Tools Setup Verification Functions
-# TODO:Add Version Print function
+# TODO: Add Version Print function
