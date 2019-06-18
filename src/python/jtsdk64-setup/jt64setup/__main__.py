@@ -34,7 +34,7 @@ def cmd(command):
     return result.stdout
 
 
-# Git Installation Data --------------------------------------------------------
+# Git Installation Data -------------------------------------------------------
 git_version = "2.22.0"
 git_inf = "git.inf"
 git_installer = "Git-2.22.0-64-bit.exe"
@@ -79,7 +79,7 @@ def print_main_menu():
     print("2. Python Installation")
     print("3. Qt Installation")
     print("4. JT64 Package Installation")
-    print("5. Verify Setup")
+    print("5. Setup Verification")
     print("6. Print JT64 Setup Version")
     print("9. Exit")
     print(40 * "-")
@@ -104,19 +104,19 @@ def main():
             pause()
             main()
         elif selection == "5":
-            print("Verifying Setup")
+            print("Setup Verification")
             pause()
             main()
         elif selection == "4":  #
-            print("Do Something 4")
+            print("JT64 Applications Installation Place Holder")
             pause()
             main()
         elif selection == "3":  # Qt Installation
-            print("Do Something 3")
+            print("Qt Installation Place Holder")
             pause()
             main()
         elif selection == "2":  # Python Installation
-            print("Do Something 2")
+            print("Python Installation Place Holder")
             pause()
             main()
         elif selection == "1":  # Git Installation
