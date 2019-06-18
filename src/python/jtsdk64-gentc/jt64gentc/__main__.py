@@ -5,6 +5,7 @@ import argparse
 
 from colorconsole import terminal
 from jt64gentc import __qt_version_list__ as qt_version_list
+from jt64gentc import __qt_version_dict__ as qt_version_dict
 from jt64gentc import __version__
 from jt64gentc import __name__
 from jt64gentc import __summary__
@@ -44,7 +45,7 @@ def supported_versions():
     print(f"Supported QT Frameworks")
     screen.reset_colors()
     print("---------------------------------------------\n")
-    for k, v in __qt_version_dict__.items():
+    for k, v in qt_version_dict.items():
         print(f" Version {k} using {v}")
 
 

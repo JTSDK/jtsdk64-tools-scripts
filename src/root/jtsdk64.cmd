@@ -13,7 +13,7 @@
 :: jtsdk64.cmd is free software: you can redistribute it and/or modify it
 :: under the terms of the GNU General Public License as published by the Free
 :: Software Foundation either version 3 of the License, or (at your option) any
-:: later version. 
+:: later version.
 ::
 :: jtsdk64.cmd is distributed in the hope that it will be useful, but WITHOUT
 :: ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
@@ -25,7 +25,7 @@
 ::-----------------------------------------------------------------------------::
 @ECHO OFF
 SET JTSDK_VERSION=3.1.0 Alpha
-@chcp 1252 >NUL 2>&1
+@chcp 65001 >NUL 2>&1
 @SET LANG=en_US
 
 :: RESET TOOL STATUS
@@ -139,23 +139,17 @@ SET JTSDK_PATH=%JTSDK_PATH%;%scripts_dir%
 :: QT SELECTION
 SET /P QTV=<%CD%\config\qt.ver
 ECHO * Checking if %QTV% is supported
-IF ["%QTV%"]==["5.12.2"] (GOTO QT_5122)
-IF ["%QTV%"]==["5.12.3"] (GOTO QT_5123)
+IF ["%QTV%"]==["5.12.2"] ( GOTO QT_ENV_SET )
+IF ["%QTV%"]==["5.12.3"] ( GOTO QT_ENV_SET )
+IF ["%QTV%"]==["5.12.4"] ( GOTO QT_ENV_SET )
+IF ["%QTV%"]==["5.13.0"] ( GOTO QT_ENV_SET )
 GOTO UNSUPPOERTED_QT_VERSION
 
-:QT_5122
-SET PROMPT=$CQT-5.12.2$F $P ^>
-SET title-string=JTSDK64-Tools using QT 5.12.2
-SET QTD=%JTSDK_HOME%\tools\Qt\5.12.2\mingw73_64\bin
-SET QTP=%JTSDK_HOME%\tools\Qt\5.12.2\mingw73_64\plugins\platforms
-SET GCCD=%JTSDK_HOME%\tools\Qt\Tools\mingw730_64\bin
-GOTO QTPATHS
-
-:QT_5123
-SET PROMPT=$CQT-5.12.3$F $P ^>
-SET title-string=JTSDK64-Tools using QT 5.12.3
-SET QTD=%JTSDK_HOME%\tools\Qt\5.12.3\mingw73_64\bin
-SET QTP=%JTSDK_HOME%\tools\Qt\5.12.3\mingw73_64\plugins\platforms
+:QT_ENV_SET
+SET PROMPT=$CQT-%QTV%$F $P ^>
+SET title-string=JTSDK64-Tools using QT %QTV%
+SET QTD=%JTSDK_HOME%\tools\Qt\%QTV%\mingw73_64\bin
+SET QTP=%JTSDK_HOME%\tools\Qt\%QTV%\mingw73_64\plugins\platforms
 SET GCCD=%JTSDK_HOME%\tools\Qt\Tools\mingw730_64\bin
 GOTO QTPATHS
 
@@ -215,11 +209,11 @@ GOTO SET_DOSKEYS
 ECHO ^* Generating Doskey^'s
 
 DOSKEY msys2 = %JTSDK_HOME%\tools\msys64\msys2_shell.cmd
-DOSKEY version-check = call python %JTSDK_HOME%\tools\scripts\python\version-check.py
-DOSKEY env-check = call python %JTSDK_HOME%\tools\scripts\python\env-check.py
-DOSKEY jtsdk-help = call python %JTSDK_HOME%\tools\scripts\python\help.py
-DOSKEY home = CD %JTSDK_HOME% $T call python %JTSDK_HOME%\tools\scripts\python\env-message.py
-DOSKEY gentc = call python %JTSDK_HOME%\tools\scripts\python\gentc.py
+DOSKEY jtversion = call python jt64version $*
+DOSKEY jtenv = call python jt64env $*
+DOSKEY jt64help = python -c "from jt64common.help import jt64_main_help; jt64_main_help()"
+DOSKEY home = CD %JTSDK_HOME% $T call python -c "from jt64common.messages import main_header_message; main_header_message()"
+DOSKEY jtgentc = call jt64gentc $*
 DOSKEY srcd = CD %JTSDK_HOME%/src
 DOSKEY clear=cls
 DOSKEY ls = ls --color=tty $*
@@ -229,8 +223,8 @@ DOSKEY lsb=dir /b
 :: PRINT ENVIRONMENT MESSAGE
 ::------------------------------------------------------------------------------
 :: timeout /t 2 :: Use this for screen print testing
-call python %JTSDK_HOME%\tools\scripts\python\gentc.py
-call python %JTSDK_HOME%\tools\scripts\python\env-message.py
+call python jt64gentc
+call python -c "from jt64common.messages import main_header_message; main_header_message()"
 ECHO.
 GOTO RUN
 
@@ -246,6 +240,8 @@ ECHO  are available at this time:
 ECHO.
 ECHO  QT 5.12.2 x64 with GCC 730_64
 ECHO  QT 5.12.3 x64 with GCC 730_64
+ECHO  QT 5.12.4 x64 with GCC 730_64
+ECHO  QT 5.13.0 x64 with GCC 730_64
 ECHO.
 ECHO  If you think this message is in error,
 ECHO  post a message at: https^:^/^/groups.io^/g^/JTSDK
