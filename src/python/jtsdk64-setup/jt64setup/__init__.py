@@ -10,3 +10,6 @@ __email__ = "ki7mt@yahoo.com"
 # TODO: Add Qt Installation Functions
 # TODO: Add JT64 Tools Setup Verification Functions
 # TODO: Add Version Print function
+# TODO: Add JTSDK64_HOME check method.
+# TODO: Remove JTSDK_HOME env variable globally
+# TODO: Add functions for custom Git Installation Locations / options
