@@ -107,7 +107,7 @@ def main():
             print("Verifying Setup")
             pause()
             main()
-        elif selection == "4":  # 
+        elif selection == "4":  #
             print("Do Something 4")
             pause()
             main()
@@ -133,5 +133,5 @@ def second_menu():
     pause()
     main()
 
-
-main()
+if __name__ == '__main__':
+    main()
