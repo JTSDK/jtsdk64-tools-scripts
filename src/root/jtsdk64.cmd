@@ -24,6 +24,13 @@
 :: along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ::-----------------------------------------------------------------------------::
 @ECHO OFF
+
+IF /I [%1]==[-d] (
+    SET debug=1
+    GOTO APP_INFO
+)
+
+:APP_INFO
 SET JTSDK_VERSION=3.1.0 Alpha
 @chcp 65001 >NUL 2>&1
 @SET LANG=en_US
@@ -36,7 +43,7 @@ SET UNIXTOOLS=Disabled
 :: JTSDK Version
 SET version=%JTSDK_VERSION%
 
-:: Set the header informaiton
+:: Set Initial Header informaiton
 TITLE JTSDK64 Tools %version%
 
 ::------------------------------------------------------------------------------
@@ -147,7 +154,11 @@ GOTO UNSUPPOERTED_QT_VERSION
 
 :QT_ENV_SET
 SET PROMPT=$CQT-%QTV%$F $P ^>
-SET title-string=JTSDK64-Tools using QT %QTV%
+IF /I [%debug%]==[1] (
+    SET title-string=JTSDK64-Tools using QT %QTV% - Debug
+) ELSE (
+    SET title-string=JTSDK64-Tools using QT %QTV% - Debug
+)
 SET QTD=%JTSDK_HOME%\tools\Qt\%QTV%\mingw73_64\bin
 SET QTP=%JTSDK_HOME%\tools\Qt\%QTV%\mingw73_64\plugins\platforms
 SET GCCD=%JTSDK_HOME%\tools\Qt\Tools\mingw730_64\bin
@@ -207,7 +218,6 @@ GOTO SET_DOSKEYS
 :: GENERATE DOSKEY's
 ::------------------------------------------------------------------------------
 ECHO ^* Generating Doskey^'s
-
 DOSKEY msys2 = %JTSDK_HOME%\tools\msys64\msys2_shell.cmd
 DOSKEY jtversion = call python jt64version $*
 DOSKEY jtenv = call python jt64env $*
@@ -220,10 +230,15 @@ DOSKEY ls = ls --color=tty $*
 DOSKEY lsb=dir /b
 
 ::------------------------------------------------------------------------------
+:: Generate Qt Tool Chain Files
+::------------------------------------------------------------------------------
+ECHO * Generating Qt Tool CHain Files
+call python -c "import jt64gentc; jt64gentc"
+
+::------------------------------------------------------------------------------
 :: PRINT ENVIRONMENT MESSAGE
 ::------------------------------------------------------------------------------
-:: timeout /t 2 :: Use this for screen print testing
-call python jt64gentc
+IF /I [%debug%]==[1] (timeout /t 60)
 call python -c "from jt64common.messages import main_header_message; main_header_message()"
 ECHO.
 GOTO RUN
