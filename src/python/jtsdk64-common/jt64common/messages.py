@@ -12,7 +12,7 @@ def main_header_message():
     clear()
     print("--------------------------------------------------")
     screen.set_color(3, 0)
-    print(f"JTSDK64 Tools {os.environ['VERSION']} Help Menu")
+    print(f"JTSDK64 Tools {os.environ['VERSION']}")
     screen.reset_colors()
     print("--------------------------------------------------")
     print('{0:18}  {1}'.format("\nQT Version", os.environ["QTV"]))
