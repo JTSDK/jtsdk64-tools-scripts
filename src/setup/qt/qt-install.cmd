@@ -17,8 +17,8 @@ IF /I [%1]==[min] (
 IF /I [%1]==[full] (
     SET script=full
     GOTO APP_INFO )
-IF /I [%1]==[update] ( GOTO UPDATE_PACKAGES )
-IF /I [%1]==[manage] ( GOTO MANAGE_PACKAGES )
+IF /I [%1]==[update] ( GOTO UPDATE_COMPONENTS )
+IF /I [%1]==[manage] ( GOTO MANAGE_COMPONENTS )
 IF /I [%1]==[help] ( GOTO _HELP )
 GOTO _HELP
 
@@ -108,27 +108,27 @@ ECHO  component.
 GOTO EOF
 
 :: ADD_PACKAGES ----------------------------------------------------------------
-:UPDATE_PACKAGES
+:UPDATE_COMPONENTS
 CLS
 ECHO -------------------------------------------------------
 ECHO  JTSDK64 Qt Maintainence Tool Update Components
 ECHO -------------------------------------------------------
 ECHO.
-ECHO Starting Qt Maintainence Tool in Update Component Mode.
+ECHO Starting Qt Maintainence Tool to Update Components
 ECHO.
-call %TOOLS_DIR%\Qt\MaintenanceTool.exe ^-^-updater
+start %TOOLS_DIR%\Qt\MaintenanceTool.exe ^-^-updater
 GOTO EOF
 
 :: MANAGE_PACKAGES ----------------------------------------------------------------
-:MANAGE_PACKAGES
+:MANAGE_COMPONENTS
 CLS
 ECHO -------------------------------------------------------
 ECHO  JTSDK64 Qt Maintainence Tool Manage Components
 ECHO -------------------------------------------------------
 ECHO.
-ECHO Starting Qt Maintainence Tool in Manage Component Mode.
+ECHO Starting Qt Maintainence Tool to Add or Remove Component.
 ECHO.
-call %TOOLS_DIR%\Qt\MaintenanceTool.exe ^-^-manage-packages
+start %TOOLS_DIR%\Qt\MaintenanceTool.exe ^-^-manage-packages
 GOTO EOF
 
 :: INSTALL_HELP ----------------------------------------------------------------
