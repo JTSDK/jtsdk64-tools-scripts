@@ -2,6 +2,7 @@ import os
 import sys
 import datetime
 import argparse
+import contextlib
 
 from colorconsole import terminal
 from jt64gentc import __qt_version_list__ as qt_version_list
