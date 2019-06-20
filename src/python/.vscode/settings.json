@@ -1,7 +1,12 @@
 {
-    "python.pythonPath": "D:\\JTSDK64-Tools\\tools\\python\\envs\\jtpy\\python.exe",
+    "python.pythonPath": "D:\\JTSDK64-Tools\\tools\\python\\envs\\devpy\\python.exe",
     "cSpell.words": [
+        "cfgfile",
+        "data",
+        "dir",
+        "miniconda",
         "parser",
+        "pgsql",
         "tcfiles"
     ]
 }
