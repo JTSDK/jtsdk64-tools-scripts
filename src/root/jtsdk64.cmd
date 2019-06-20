@@ -64,11 +64,11 @@ GOTO POSTGRES_CHECK
 :: PostgreSQL PATH
 ::------------------------------------------------------------------------------
 
-ECHO ^* Checking PostgreSQL
 :POSTGRES_CHECK
+ECHO ^* Checking PostgreSQL
 IF EXIST "%JTSDK_HOME%\tools\PostgreSQL\11\pg_env.bat" (
-call %JTSDK_HOME%\tools\PostgreSQL\11\pg_env.bat
-SET POSTGRES=Installed
+    call %JTSDK_HOME%\tools\PostgreSQL\11\pg_env.bat
+    SET POSTGRES=Installed
 )
 GOTO CORE_TOOLS
 
