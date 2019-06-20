@@ -1,0 +1,319 @@
+<Packages>
+    <ApplicationName>Qt</ApplicationName>
+    <ApplicationVersion>1.0.0</ApplicationVersion>
+    <Package>
+        <Name>qt</Name>
+        <Title>Qt</Title>
+        <Description>Qt</Description>
+        <Version>1.0.9</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-05-30</InstallDate>
+        <Size>0</Size>
+        <Dependencies>qt.license.thirdparty,qt.license.lgpl</Dependencies>
+    </Package>
+    <Package>
+        <Name>qt.installer.changelog</Name>
+        <Title>Qt Installer Changelog</Title>
+        <Description></Description>
+        <Version>1.0.2</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-05-30</InstallDate>
+        <Size>1702</Size>
+        <AutoDependOn>qt</AutoDependOn>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.license.lgpl</Name>
+        <Title>Qt License LGPL</Title>
+        <Description></Description>
+        <Version>1.0.2</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-05-30</InstallDate>
+        <Size>0</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.license.python</Name>
+        <Title>Python Software Foundation License Version 2</Title>
+        <Description></Description>
+        <Version>1.0.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-05-30</InstallDate>
+        <Size>0</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.license.thirdparty</Name>
+        <Title>Qt 3rd Party Licenses</Title>
+        <Description></Description>
+        <Version>1.0.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-05-30</InstallDate>
+        <Size>106261</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt5.5122</Name>
+        <Title>Qt 5.12.2</Title>
+        <Description>Qt 5.12.2</Description>
+        <Version>5.12.2-0-201903131458</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-05-30</InstallDate>
+        <Size>2246</Size>
+        <Dependencies>qt.qt5.5122.doc,qt.qt5.5122.examples,qt.license.thirdparty,qt.license.lgpl</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt5.5122.doc</Name>
+        <Title>Qt 5.12.2 Documentation</Title>
+        <Description>Qt 5.12.2 documentation</Description>
+        <Version>5.12.2-0-201903131458</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-05-30</InstallDate>
+        <Size>586619404</Size>
+        <Dependencies>qt.tools</Dependencies>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt5.5122.examples</Name>
+        <Title>Qt 5.12.2 Examples</Title>
+        <Description>Qt 5.12.2 Examples</Description>
+        <Version>5.12.2-0-201903131458</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-05-30</InstallDate>
+        <Size>164202410</Size>
+        <Dependencies>qt.tools</Dependencies>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt5.5122.win64_mingw73</Name>
+        <Title>MinGW 7.3.0 64-bit</Title>
+        <Description>Qt 5.12.2 Prebuilt Components for MinGW 7.3.0 64-bit</Description>
+        <Version>5.12.2-0-201903131307</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-05-30</InstallDate>
+        <Size>5238561821</Size>
+        <Dependencies>qt.tools.qtcreator,qt.tools.win64_mingw730,qt.qt5.5122.doc,qt.qt5.5122.examples</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt5.5123</Name>
+        <Title>Qt 5.12.3</Title>
+        <Description>Qt 5.12.3</Description>
+        <Version>5.12.3-0-201904161537</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-06-12</InstallDate>
+        <Size>2246</Size>
+        <Dependencies>qt.qt5.5123.doc,qt.qt5.5123.examples,qt.license.thirdparty,qt.license.lgpl</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt5.5123.doc</Name>
+        <Title>Qt 5.12.3 Documentation</Title>
+        <Description>Qt 5.12.3 documentation</Description>
+        <Version>5.12.3-0-201904161537</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-06-12</InstallDate>
+        <Size>586648900</Size>
+        <Dependencies>qt.tools</Dependencies>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt5.5123.examples</Name>
+        <Title>Qt 5.12.3 Examples</Title>
+        <Description>Qt 5.12.3 Examples</Description>
+        <Version>5.12.3-0-201904161537</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-06-12</InstallDate>
+        <Size>164203558</Size>
+        <Dependencies>qt.tools</Dependencies>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt5.5123.win64_mingw73</Name>
+        <Title>MinGW 7.3.0 64-bit</Title>
+        <Description>Qt 5.12.3 Prebuilt Components for MinGW 7.3.0 64-bit</Description>
+        <Version>5.12.3-0-201904161237</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-06-12</InstallDate>
+        <Size>5249538509</Size>
+        <Dependencies>qt.tools.qtcreator,qt.tools.win64_mingw730,qt.qt5.5123.doc,qt.qt5.5123.examples</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt5.5124</Name>
+        <Title>Qt 5.12.4</Title>
+        <Description>Qt 5.12.4</Description>
+        <Version>5.12.4-0-201906140304</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-06-18</InstallDate>
+        <Size>2444</Size>
+        <Dependencies>qt.qt5.5124.doc,qt.qt5.5124.examples,qt.license.thirdparty,qt.license.lgpl</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt5.5124.doc</Name>
+        <Title>Qt 5.12.4 Documentation</Title>
+        <Description>Qt 5.12.4 documentation</Description>
+        <Version>5.12.4-0-201906140304</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-06-18</InstallDate>
+        <Size>571848357</Size>
+        <Dependencies>qt.tools</Dependencies>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt5.5124.examples</Name>
+        <Title>Qt 5.12.4 Examples</Title>
+        <Description>Qt 5.12.4 Examples</Description>
+        <Version>5.12.4-0-201906140304</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-06-18</InstallDate>
+        <Size>164203766</Size>
+        <Dependencies>qt.tools</Dependencies>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt5.5124.win64_mingw73</Name>
+        <Title>MinGW 7.3.0 64-bit</Title>
+        <Description>Qt 5.12.4 Prebuilt Components for MinGW 7.3.0 64-bit</Description>
+        <Version>5.12.4-0-201906140149</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-06-18</InstallDate>
+        <Size>5256566070</Size>
+        <Dependencies>qt.tools.qtcreator,qt.tools.win64_mingw730,qt.qt5.5124.doc,qt.qt5.5124.examples</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt5.5130</Name>
+        <Title>Qt 5.13.0</Title>
+        <Description>Qt 5.13.0</Description>
+        <Version>5.13.0-0-201906171803</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-06-18</InstallDate>
+        <Size>2440</Size>
+        <Dependencies>qt.qt5.5130.doc,qt.qt5.5130.examples,qt.license.thirdparty,qt.license.lgpl</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt5.5130.doc</Name>
+        <Title>Qt 5.13.0 Documentation</Title>
+        <Description>Qt 5.13.0 documentation</Description>
+        <Version>5.13.0-0-201906171803</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-06-18</InstallDate>
+        <Size>526648345</Size>
+        <Dependencies>qt.tools</Dependencies>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt5.5130.examples</Name>
+        <Title>Qt 5.13.0 Examples</Title>
+        <Description>Qt 5.13.0 Examples</Description>
+        <Version>5.13.0-0-201906171803</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-06-18</InstallDate>
+        <Size>152933941</Size>
+        <Dependencies>qt.tools</Dependencies>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.qt5.5130.win64_mingw73</Name>
+        <Title>MinGW 7.3.0 64-bit</Title>
+        <Description>Qt 5.13.0 Prebuilt Components for MinGW 7.3.0 64-bit</Description>
+        <Version>5.13.0-0-201906171525</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-06-18</InstallDate>
+        <Size>5224274973</Size>
+        <Dependencies>qt.tools.qtcreator,qt.tools.win64_mingw730,qt.qt5.5130.doc,qt.qt5.5130.examples</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.tools</Name>
+        <Title>Developer and Designer Tools</Title>
+        <Description>IDE, Internationalization, Design and other tools to accelerate development.</Description>
+        <Version>1.0.8-0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-05-30</InstallDate>
+        <Size>0</Size>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.tools.maintenance</Name>
+        <Title>Maintenance Tool</Title>
+        <Description>Maintenance Tool</Description>
+        <Version>3.1.1-1-201905151121</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-05-30</InstallDate>
+        <Size>20247849</Size>
+        <ForcedInstallation>true</ForcedInstallation>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>qt.tools.qtcreator</Name>
+        <Title>Qt Creator 4.9.1</Title>
+        <Description>IDE for Qt application development</Description>
+        <Version>4.9.1-0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-05-30</InstallDate>
+        <Size>462155952</Size>
+        <Dependencies>qt.tools.vcredist_msvc2017_x86,qt.tools.vcredist_msvc2017_x64</Dependencies>
+        <ForcedInstallation>true</ForcedInstallation>
+    </Package>
+    <Package>
+        <Name>qt.tools.qtcreatorcdbext</Name>
+        <Title>Qt Creator 4.9.1 CDB Debugger Support</Title>
+        <Description>CDB Debugger support for Qt Creator</Description>
+        <Version>4.9.1-0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-05-30</InstallDate>
+        <Size>9817342</Size>
+        <Dependencies>qt.tools.qtcreator,qt.license.python</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.tools.vcredist_msvc2017_x64</Name>
+        <Title>VCRedist for MSVC 2017 64bit</Title>
+        <Description>Visual C++ Redistributable Packages for Visual Studio 2017 64 bit</Description>
+        <Version>2019-02-13-1</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-05-30</InstallDate>
+        <Size>15330104</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.tools.vcredist_msvc2017_x86</Name>
+        <Title>VCRedist for MSVC 2017 32bit</Title>
+        <Description>Visual C++ Redistributable Packages for Visual Studio 2017 32 bit</Description>
+        <Version>2019-02-13-1</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-05-30</InstallDate>
+        <Size>14648504</Size>
+        <Virtual>true</Virtual>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>qt.tools.win64_mingw730</Name>
+        <Title>MinGW 7.3.0 64-bit</Title>
+        <Description>MinGW-builds 7.3.0 64-bit toolchain.</Description>
+        <Version>7.3.0-1-201903151311</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2019-05-30</InstallDate>
+        <Size>472170606</Size>
+        <Dependencies>qt.tools.qtcreator</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+</Packages>
