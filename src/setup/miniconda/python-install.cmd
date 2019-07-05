@@ -2,7 +2,7 @@
 :: Name .........: python-install.cmd
 :: Project ......: Part of the JTSDK64 Tools Project
 :: Description ..: Installs Miniconda Python and JTPY Environment
-:: Project URL ..: https://github.com/KI7MT
+:: Project URL ..: https://github.com/KI7MT/jtsdk64-tools-scripts.git
 :: Usage ........: call this from jtsdk64-tools-setup => pysetup-all
 ::
 :: Author .......: Greg, Beam, KI7MT, <ki7mt@yahoo.com>

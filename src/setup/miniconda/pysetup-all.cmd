@@ -1,14 +1,13 @@
 ::-----------------------------------------------------------------------------::
 :: Name .........: pysetup-all-stub.cmd
 :: Project ......: Part of the JTSDK64 Tools Project
-:: Description ..: Call all the pysetup funcitons
-:: Project URL ..: https://github.com/KI7MT
-:: Usage ........: call this from jtsdk64-tools-setup => pysetup-all
+:: Description ..: Installs all Python requirements for JTSDK64
+:: Project URL ..: https://github.com/KI7MT/jtsdk64-tools-scripts.git
+:: Usage ........: Call this from jtsdk64-tools-setup => pysetup-all
 ::
 :: Author .......: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
 :: Copyright ....: Copyright (C) 2013-2019 Greg Beam, KI7MT
 :: License ......: GPLv3
-::
 ::-----------------------------------------------------------------------------::
 
 :: Run all python install functions

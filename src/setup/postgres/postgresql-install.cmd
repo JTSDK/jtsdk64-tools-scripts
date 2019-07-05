@@ -2,7 +2,7 @@
 :: Name .........: postgres-install.cmd
 :: Project ......: Part of the JTSDK64 Tools Project
 :: Description ..: Installs PostgreSQL with pgAdmin4 and command line tools
-:: Project URL ..: https://github.com/KI7MT
+:: Project URL ..: https://github.com/KI7MT/jtsdk64-tools-scripts.git
 :: Usage ........: call this from jtsdk64-tools-setup => pgsetup install
 ::
 :: Author .......: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
@@ -97,7 +97,7 @@ ECHO  Uninstall
 ECHO    pgsetup uninstall    Uninstall PostgreSQL
 ECHO.
 ECHO  To ensure the install worked properly, exit the setup
-ECHO  environment, then re^-launch jtsdk64-tools-setup.
+ECHO  environment and re^-launch jtsdk64-tools-setup.
 ECHO.
 GOTO EOF
 

@@ -1,17 +1,21 @@
 @echo off
-:: -----------------------------------------------------------------
-:: File ..............: qtgenjs.cmd
-:: Description .......: Generates qt-install.qs scripts
-:: Script Author .....: Greg Beam, KI7MT
-:: Script Copyright ..: Copyright (c) 2013-2019, Greg Beam
-:: Script License ....: GPLv3
+::-----------------------------------------------------------------------------::
+:: Name .........: qtgentc.cmd
+:: Project ......: Part of the JTSDK64 Tools Project
+:: Version ......: 3.1.0
+:: Description ..: Generats QT installer JS scripts
+:: Project URL ..: https://github.com/KI7MT/jtsdk64-tools-scripts.git
+::
+:: Author .......: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
+:: Copyright ....: Copyright (C) 2013-2019 Greg Beam, KI7MT
+:: License ......: GPL-3
 ::
 :: Usage:
 ::      Minimal Install
-::      qt-unified-windows-x86-<app_version>-online.exe --script .\qt-min-install.qs
+::      qt-unified-windows-x86-online.exe --script .\qt-min-install.qs
 ::
 ::      Full Install
-::      qt-unified-windows-x86-<app_version>-online.exe --script .\qt-full-install.qs
+::      qt-unified-windows-x86-online.exe --script .\qt-full-install.qs
 ::
 :: -----------------------------------------------------------------
 
@@ -23,7 +27,6 @@ GOTO _HELP
 :APP_INFO
 set app_name=qt
 set app_formal_name=Qt
-set app_version=3.1.1
 
 :: source and output file paths
 set source_dir=%JTSDK64_HOME%\tools\setup\qt

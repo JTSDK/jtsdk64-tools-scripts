@@ -2,7 +2,7 @@
 :: Name .........: qt-install.cmd
 :: Project ......: Part of the JTSDK64 Tools Project
 :: Description ..: Installs Qt for Windows
-:: Project URL ..: https://github.com/KI7MT
+:: Project URL ..: https://github.com/KI7MT/jtsdk64-tools-scripts.git
 :: Usage ........: call this from jtsdk64-tools-setup => qt-install $*
 ::
 :: Author .......: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
@@ -53,7 +53,7 @@ ECHO Sarting Qt Installation. Cick "NEXT" on the Welcome screen,
 ECHO then the installer script will do the rest.
 ECHO.
 CD %SETUP_DIR%\qt
-qt-unified-windows-x86-%ins_ver%-online.exe --script .\qt-%script%-install.qs
+qt-unified-windows-x86-online.exe --script .\qt-%script%-install.qs
 IF %ERRORLEVEL% == 0 (
     ECHO Install Check Passed
     GOTO INSTALL_SUMMARY

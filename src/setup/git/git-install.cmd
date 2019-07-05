@@ -1,9 +1,9 @@
 ::-----------------------------------------------------------------------------::
 :: Name .........: git-install.cmd
 :: Project ......: Part of the JTSDK64 Tools Project
-:: Description ..: Installs Git for Windows
-:: Project URL ..: https://github.com/KI7MT
-:: Usage ........: call this from jtsdk64-tools-setup => git-install $*
+:: Description ..: Installs Git SCM for Windows
+:: Project URL ..: https://github.com/KI7MT/jtsdk64-tools-scripts.git
+:: Usage ........: Call this from jtsdk64-tools-setup => git-install $*
 ::
 :: Author .......: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
 :: Copyright ....: Copyright (C) 2013-2019 Greg Beam, KI7MT
@@ -27,6 +27,7 @@ ECHO.
 CD %SETUP_DIR%\git
 ECHO Running Git-2.22.0-64-bit^.exe^, Please Wait
 Git-2.22.0-64-bit.exe ^/SILENT ^/CLOSEAPPLICATIONS ^/LOADINF=.^\git.inf
+
 ECHO Verifying Installation
 git --version >NUL 2>&1
 IF %ERRORLEVEL% == 0 (
@@ -86,8 +87,8 @@ ECHO.
 ECHO  Install Directory ..... %ProgramFiles%\Git
 ECHO.
 ECHO  To ensure the install ^| upgrade worked properly,
-ECHO  ^exit the setup environment, then re^-launch
-ECHO  jtsdk64-tools-setup, then test the install.
+ECHO  ^exit the setup environment and re^-launch
+ECHO  jtsdk64-tools-setup.
 ECHO.
 ECHO  Test the git binary with ^: git ^-^-version
 ECHO.
@@ -102,14 +103,14 @@ ECHO  JTSDK64 Git Setup Help
 ECHO -------------------------------------------------------
 ECHO.
 ECHO  Use the following commands to install and configure
-ECHO  Miniconda Python.
+ECHO  Git SCM for Windows.
 ECHO.
 ECHO  gitsetup help          Shows this help screen
 ECHO  gitsetup install       Install Git
 ECHO  gitsetup update        Update Git to latest version
 ECHO.
 ECHO  Uninstall
-ECHO    gitsetup uninstall    Uninstall Miniconda Python
+ECHO    gitsetup uninstall    Uninstall Git
 ECHO.
 ECHO  To ensure the install ^| upgrade worked properly,
 ECHO  ^exit the setup environment, then re^-launch

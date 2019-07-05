@@ -1,7 +1,7 @@
 ::-----------------------------------------------------------------------------::
 :: Name .........: jtsdk64.cmd
 :: Project ......: Part of the JTSDK64 Tools Project
-:: Version ......: 3.1.0 Alpha
+:: Version ......: 3.1.0
 :: Description ..: Main Environment Script
 :: Project URL ..: https://github.com/KI7MT
 :: Usage ........: Call this file directly, or from command line
@@ -31,7 +31,7 @@ IF /I [%1]==[-d] (
 )
 
 :APP_INFO
-SET JTSDK_VERSION=3.1.0 Alpha
+SET JTSDK_VERSION=3.1.0
 @chcp 65001 >NUL 2>&1
 @SET LANG=en_US
 
@@ -94,6 +94,13 @@ SET rubyv=2.6.3
 SET svnv=1.9.7
 SET cmakev=3.14.4
 SET sqlitev=3.28
+SET mongodbv=4.0.10
+
+
+:: MongoDB
+SET mongodb_dir=%JTSDK_HOME%\tools\mongodb\%mongodbv%\bin
+SET "mongodb_dir_f=%mongodb_dir:\=/%"
+SET JTSDK_PATH=%JTSDK_PATH%;%mongodb_dir%
 
 :: SQlite
 SET sqlite_dir=%JTSDK_HOME%\tools\sqlite\%sqlitev%
@@ -138,6 +145,7 @@ SET JTSDK_PATH=%JTSDK_PATH%;%cmake_dir%
 :: Scripts Directory
 SET scripts_dir=%JTSDK_HOME%\tools\scripts\cmd
 SET JTSDK_PATH=%JTSDK_PATH%;%scripts_dir%
+
 
 ::------------------------------------------------------------------------------
 :: CONDITIONAL PATHS for Multiple versions of Qt

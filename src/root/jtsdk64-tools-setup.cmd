@@ -1,7 +1,7 @@
 ::-----------------------------------------------------------------------------::
 :: Name .........: jtsdk64-tools-setup.cmd
 :: Project ......: Part of the JTSDK64 Tools Project
-:: Version ......: 3.1.0 Alpha
+:: Version ......: 3.1.0
 :: Description ..: Main Environment Script
 :: Project URL ..: https://github.com/KI7MT
 :: Usage ........: Call this file directly from the command line
@@ -27,7 +27,7 @@
 SET /P JTSDK64_VERSION=<%CD%\ver.jtsdk
 @chcp 1252 >NUL 2>&1
 @SET LANG=en_US
-SET version=0.0.1
+SET version=<%CD%\ver.jtsdk
 TITLE JTSDK64 Tools Setup %version%
 
 ::------------------------------------------------------------------------------
@@ -69,38 +69,49 @@ SET QT5124_STATUS=Not Installed
 SET QT5130_STATUS=Not Installed
 SET DOTNET_STATUS=Not Installed
 SET JAVA_STATUS=Not Installed
+SET VSCODE_STATUS=Not Installed
 GOTO APP_CHECK
 
 :APP_CHECK
 ECHO Gather tool^chain data, please wait...
+
+ECHO Checking Git
 git --version >NUL 2>&1
 IF %ERRORLEVEL% == 0 ( SET GIT_STATUS=Installed )
 
+ECHO Checking Dotnet SDK
 dotnet --version >NUL 2>&1
 IF %ERRORLEVEL% == 0 ( SET DOTNET_STATUS=Installed )
 
+ECHO Checking VS Code
+IF EXIST "%LOCALAPPDATA%\Programs\Microsoft VS Code\unins000.exe" (
+SET VSCODE_STATUS=Installed
+)
+
+:: Check Java
+ECHO Checking Java
 java -version >NUL 2>&1
 IF %ERRORLEVEL% == 0 ( SET JAVA_STATUS=Installed )
 
 :: Check for Python
-IF EXIST "%TOOLS_DIR%\python\python.exe" ( SET PYTHON_STATUS=Installed)
+ECHO Checking Python
+IF EXIST "%TOOLS_DIR%\python\python.exe" ( SET PYTHON_STATUS=Installed )
 
-:: Activate Miniconda Python Environment
 IF EXIST "%TOOLS_DIR%\python\Scripts\activate.bat" (
     call %TOOLS_DIR%\python\Scripts\activate.bat D:\JTSDK64-Tools\tools\python
 )
 
-:: Activate JTPY
 IF EXIST "%TOOLS_DIR%\python\envs\jtpy\python.exe" (
     call conda activate jtpy
     SET JTPY_STATUS=Enabled
 )
 
 :: PostgreSQL CHeck
+ECHO Checking PostgreSQL
 IF EXIST "%TOOLS_DIR%\PostgreSQL\11\pg_env.bat" ( SET PGSQL_STATUS=Installed )
 
 :: Qt Tool Chain
-:: Note: The call command generates the Qt Installer JavaScripts (min, and full)
+ECHO Checking QT Tools
 call "%SETUP_DIR%\qt\qtgenjs.cmd" >NUL 2>&1
 IF EXIST "%TOOLS_DIR%\Qt\MaintenanceTool.exe" ( SET QTMAINT_STATUS=Installed )
 IF EXIST "%TOOLS_DIR%\Qt\Tools\QtCreator\bin\qtcreator.exe" ( SET QTCREATOR_STATUS=Installed )
@@ -121,43 +132,15 @@ DOSKEY pysetup = call %SETUP_DIR%\miniconda\python-install.cmd $*
 DOSKEY pysetup-all = call %SETUP_DIR%\miniconda\pysetup-all.cmd
 DOSKEY pgsetup = call %SETUP_DIR%\postgres\postgresql-install.cmd $*
 DOSKEY qtsetup = call %SETUP_DIR%\qt\qt-install.cmd $*
+DOSKEY codesetup = call %SETUP_DIR%\vscode\vscode-install.cmd $*
+DOSKEY home = cd /d %JTSDK_HOME% $T %SETUP_DIR%\cmd\greeting.cmd
 
 ::------------------------------------------------------------------------------
 :: PRTINT TOOL CHAN STATUS / GREETING MESSAGE
 ::------------------------------------------------------------------------------
 
 :_GREETING
-CLS
-ECHO --------------------------------------------
-ECHO  JTSDK64 Tools Setup v%version%
-ECHO --------------------------------------------
-ECHO.
-ECHO  Core Tool Status
-ECHO     Git .......... %GIT_STATUS%
-ECHO     Python ....... %PYTHON_STATUS%
-ECHO     JTPY Env ..... %JTPY_STATUS%
-ECHO.
-ECHO  Qt Tool Chain Status
-ECHO     5.12.2 ....... %QT5122_STATUS%
-ECHO     5.12.3 ....... %QT5123_STATUS%
-ECHO     5.12.4 ....... %QT5124_STATUS%
-ECHO     5.13.0 ....... %QT5130_STATUS%
-ECHO     GCC 7.3 ...... %GCC73_STATUS%
-ECHO     QtCreator .... %QTCREATOR_STATUS%
-ECHO     Maintenance .. %QTMAINT_STATUS%
-
-::ECHO.
-:: For future releases
-::ECHO  Other Tool Status
-::ECHO     Postgres ..... %PGSQL_STATUS%
-::ECHO     Dotnet ....... %DOTNET_STATUS%
-::ECHO     Java ......... %JAVA_STATUS%
-ECHO.
-ECHO  Help Commands
-ECHO     Git .......... gitsetup help
-ECHO     Python ....... pysetup help
-ECHO     Qt ........... qtetup help
-ECHO.
+call %SETUP_DIR%\cmd\greeting.cmd
 GOTO EOF
 
 :EOF
